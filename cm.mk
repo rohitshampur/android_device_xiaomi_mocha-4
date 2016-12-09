@@ -13,3 +13,10 @@ PRODUCT_NAME := cm_mocha
 PRODUCT_BRAND := xiaomi
 PRODUCT_MODEL := mocha
 PRODUCT_MANUFACTURER := xiaomi
+
+# Build.prop overrides
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    TARGET_DEVICE="mocha" \
+    PRODUCT_NAME="mocha" \
+    BUILD_FINGERPRINT="Xiaomi/mocha/mocha:4.4.4/KTU84P/V7.5.2.0.KXFMIDE:user/release-keys" \
+    PRIVATE_BUILD_DESC="mocha-user 4.4.4 KTU84P V7.5.2.0.KXFMIDE release-keys"
