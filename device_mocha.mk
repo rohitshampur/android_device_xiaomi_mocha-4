@@ -76,6 +76,11 @@ PRODUCT_COPY_FILES += \
 # PowerHAL
 PRODUCT_PACKAGES += power.tegra
 
+# Bluetooth
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/bluetooth/bdaddr:system/etc/bluetooth/bdaddr \
+    $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
+
 # Media configs
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_codecs.xml:system/etc/media_codecs.xml \
