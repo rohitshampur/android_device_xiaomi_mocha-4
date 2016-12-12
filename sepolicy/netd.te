@@ -1,4 +1,4 @@
-# Copyright (c) 2014, NVIDIA CORPORATION.  All rights reserved.
+# Copyright (c) 2013-2014, NVIDIA CORPORATION.  All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,12 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-blakemgr		u:object_r:system_app_service:s0
-input-cfboost		u:object_r:system_app_service:s0
-nvcpl			u:object_r:system_app_service:s0
-PHS					u:object_r:ussrd_service:s0
-set_hwui_params		u:object_r:system_app_service:s0
+# /sys/class/net/... links to USB platform device (mtu config)
+allow netd sysfs_bus_usb:dir r_dir_perms;
+allow netd sysfs_bus_usb:file rw_file_perms;
 
-android.display.hwcomposer        u:object_r:surfaceflinger_service:s0
+# Allow netd to access symlinks created by wifiloader
+allow netd wifi_data_file:lnk_file { getattr read write };
 
-raydium.ts_service	u:object_r:raydium_touch_service:s0
+# Allow netd to write to sysfs wifi file to change FW path
+allow netd sysfs_wifi:file w_file_perms;
+
+allow netd kernel:system module_request;
+
+dontaudit netd self:capability { sys_module fsetid };

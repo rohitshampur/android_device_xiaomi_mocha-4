@@ -12,12 +12,23 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-blakemgr		u:object_r:system_app_service:s0
-input-cfboost		u:object_r:system_app_service:s0
-nvcpl			u:object_r:system_app_service:s0
-PHS					u:object_r:ussrd_service:s0
-set_hwui_params		u:object_r:system_app_service:s0
+#
+# ussr_setup.sh - power management service setup
+#
+type ussr_setup, domain;
+type ussr_setup_exec, exec_type, file_type;
 
-android.display.hwcomposer        u:object_r:surfaceflinger_service:s0
+init_daemon_domain(ussr_setup)
 
-raydium.ts_service	u:object_r:raydium_touch_service:s0
+allow ussr_setup self:capability { dac_override chown fowner fsetid };
+unix_socket_connect(ussr_setup, property, init)
+
+# file access
+allow ussr_setup system_file:file x_file_perms;
+allow ussr_setup shell_exec:file rx_file_perms;
+
+# thermal
+allow ussr_setup thermal_prop:property_service set;
+allow ussr_setup sysfs_thermal:dir { setattr rw_dir_perms };
+allow ussr_setup sysfs_thermal:{file lnk_file} { setattr rw_file_perms };
+

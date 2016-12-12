@@ -12,12 +12,23 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-blakemgr		u:object_r:system_app_service:s0
-input-cfboost		u:object_r:system_app_service:s0
-nvcpl			u:object_r:system_app_service:s0
-PHS					u:object_r:ussrd_service:s0
-set_hwui_params		u:object_r:system_app_service:s0
+# /dev/quadd
+type quadd_device, dev_type;
 
-android.display.hwcomposer        u:object_r:surfaceflinger_service:s0
+# /dev/quadd_auth
+type quadd_auth_device, dev_type;
 
-raydium.ts_service	u:object_r:raydium_touch_service:s0
+# /dev/hidraw[0-9]
+type hidraw_device, dev_type;
+
+# Tsec device
+type tsec_device, dev_type;
+
+# /dev/constraint*
+type pmqos_device, dev_type;
+
+# Tegra graphics devices
+type tegradc_device, dev_type;
+
+# /dev/touch
+type touch_device, dev_type;

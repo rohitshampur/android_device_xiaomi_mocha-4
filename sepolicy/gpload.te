@@ -12,12 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-blakemgr		u:object_r:system_app_service:s0
-input-cfboost		u:object_r:system_app_service:s0
-nvcpl			u:object_r:system_app_service:s0
-PHS					u:object_r:ussrd_service:s0
-set_hwui_params		u:object_r:system_app_service:s0
 
-android.display.hwcomposer        u:object_r:surfaceflinger_service:s0
+type gpload, domain;
+type gpload_exec, exec_type, file_type;
 
-raydium.ts_service	u:object_r:raydium_touch_service:s0
+init_daemon_domain(gpload)
+
+allow gpload device:dir read;
+allow gpload usb_device:dir r_dir_perms;
+allow gpload usb_device:chr_file rw_file_perms;
