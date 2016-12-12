@@ -67,11 +67,11 @@ PRODUCT_PACKAGES += \
     ueventd.mocha.rc
 
 PRODUCT_COPY_FILES += \
-    device/xiaomi/mocha/rootdir/etc/init:root/init \
-    device/xiaomi/mocha/rootdir/etc/init.rc:root/init.rc \
-    device/xiaomi/mocha/rootdir/sbin/healthd:root/sbin/healthd \
-    device/xiaomi/mocha/rootdir/sbin/chargeonlymode:root/sbin/chargeonlymode \
-    device/xiaomi/mocha/rootdir/sbin/mdbd:root/sbin/mdbd
+    device/xiaomi/mocha/initfiles/etc/init:root/init \
+    device/xiaomi/mocha/initfiles/etc/init.rc:root/init.rc \
+    device/xiaomi/mocha/initfiles/sbin/healthd:root/sbin/healthd \
+    device/xiaomi/mocha/initfiles/sbin/chargeonlymode:root/sbin/chargeonlymode \
+    device/xiaomi/mocha/initfiles/sbin/mdbd:root/sbin/mdbd
 
 # Device Keylayout
 PRODUCT_COPY_FILES += \
