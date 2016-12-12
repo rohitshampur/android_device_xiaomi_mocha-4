@@ -38,6 +38,7 @@ on boot
     setprop nvwfd.maxresolution_macroblocks 8160
     #enable Miracast game mode support
     setprop nvwfd.gamemode 1
+    setprop wifi.supplicant wpa_suppl_nl
 
     # Remove gps feature from mocha
     # Start GPS daemon
@@ -91,4 +92,6 @@ on property:persist.sys.matsir.enable=1
     start sysmatsir
     start sysmatpro
 
-
+on property:persist.debug.trace=1
+    mkdir /data/core 0777 root root
+    write /proc/sys/kernel/core_pattern "/data/core/%E.%p.%e"
