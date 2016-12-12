@@ -39,6 +39,7 @@ BOARD_KERNEL_IMAGE_NAME := zImage
 # Recovery
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_RECOVERY_FSTAB := device/xiaomi/mocha/recovery/recovery.fstab
+PRODUCT_COPY_FILES += device/xiaomi/mocha/recovery/recovery.fstab:recovery/root/etc/recovery.fstab
 RECOVERY_SDCARD_ON_DATA := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TW_INTERNAL_STORAGE_PATH := "/data/media"
