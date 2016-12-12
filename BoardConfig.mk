@@ -48,7 +48,7 @@ BOARD_SUPPORT_NVOICE := true
 BOARD_SUPPORT_NVAUDIOFX := true
 
 # Adaptive backlight
-BOARD_HARDWARE_CLASS := device/nvidia/shieldtablet/cmhw/
+BOARD_HARDWARE_CLASS := device/xiaomi/mocha/cmhw/
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
