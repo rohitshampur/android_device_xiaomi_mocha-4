@@ -33,3 +33,6 @@ TARGET_KERNEL_CONFIG := mocha_user_defconfig
 BOARD_KERNEL_IMAGE_NAME := zImage
 
 BOARD_HAS_NO_SELECT_BUTTON := true
+
+# Tegra PowerHAL
+TARGET_POWERHAL_VARIANT := tegra

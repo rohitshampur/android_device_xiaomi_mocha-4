@@ -64,3 +64,6 @@ PRODUCT_COPY_FILES += \
     device/xiaomi/mocha/rootdir/sbin/healthd:root/sbin/healthd \
     device/xiaomi/mocha/rootdir/sbin/chargeonlymode:root/sbin/chargeonlymode \
     device/xiaomi/mocha/rootdir/sbin/mdbd:root/sbin/mdbd
+
+# PowerHAL
+PRODUCT_PACKAGES += power.tegra
