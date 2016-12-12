@@ -7,6 +7,9 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 # Inherit device configuration
 $(call inherit-product, device/xiaomi/mocha/device_mocha.mk)
 
+$(call inherit-product, build/target/product/full.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := mocha
 PRODUCT_NAME := cm_mocha
