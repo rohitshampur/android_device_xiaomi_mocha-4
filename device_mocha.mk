@@ -43,3 +43,24 @@ $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk
 
 # Proprietary vendor files
 $(call inherit-product-if-exists, vendor/xiaomi/mocha/mocha-vendor.mk)
+
+# Ramdisk files
+PRODUCT_PACKAGES += \
+    fstab.mocha \
+    init.mocha.rc \
+    init.t124_emmc.rc \
+    init.t124_sata.rc \
+    init.cal.rc \
+    init.hdcp.rc \
+    init.t124.rc \
+    init.tlk.rc \
+    init.nv_dev_board.usb.rc \
+    power.mocha.rc \
+    ueventd.mocha.rc
+
+PRODUCT_COPY_FILES += \
+    device/xiaomi/mocha/rootdir/etc/init:root/init \
+    device/xiaomi/mocha/rootdir/etc/init.rc:root/init.rc \
+    device/xiaomi/mocha/rootdir/sbin/healthd:root/sbin/healthd \
+    device/xiaomi/mocha/rootdir/sbin/chargeonlymode:root/sbin/chargeonlymode \
+    device/xiaomi/mocha/rootdir/sbin/mdbd:root/sbin/mdbd
