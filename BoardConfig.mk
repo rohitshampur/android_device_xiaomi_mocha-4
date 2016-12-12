@@ -36,3 +36,6 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 
 # Tegra PowerHAL
 TARGET_POWERHAL_VARIANT := tegra
+
+# Adaptive backlight
+BOARD_HARDWARE_CLASS := device/nvidia/shieldtablet/cmhw/
