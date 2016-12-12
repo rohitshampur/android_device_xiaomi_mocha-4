@@ -73,6 +73,15 @@ PRODUCT_COPY_FILES += \
     device/xiaomi/mocha/rootdir/sbin/chargeonlymode:root/sbin/chargeonlymode \
     device/xiaomi/mocha/rootdir/sbin/mdbd:root/sbin/mdbd
 
+# Device Keylayout
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
+    $(LOCAL_PATH)/keylayout/tegra-rt5671_headphone_detect.kl:system/usr/keylayout/tegra-rt5671_headphone_detect.kl \
+    $(LOCAL_PATH)/keylayout/atmel-maxtouch.kl:system/usr/keylayout/atmel-maxtouch.kl \
+    $(LOCAL_PATH)/keylayout/tegra-kbc.kl:system/usr/keylayout/tegra-kbc.kl \
+    $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    $(LOCAL_PATH)/keylayout/Vendor_0955_Product_7210.kl:system/usr/keylayout/Vendor_0955_Product_7210.kl
+
 # PowerHAL
 PRODUCT_PACKAGES += power.tegra
 
