@@ -73,6 +73,11 @@ PRODUCT_COPY_FILES += \
     device/xiaomi/mocha/rootdir/sbin/chargeonlymode:root/sbin/chargeonlymode \
     device/xiaomi/mocha/rootdir/sbin/mdbd:root/sbin/mdbd
 
+# Bluetooth
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/bluetooth/bdaddr:system/etc/bluetooth/bdaddr \
+    $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
+
 # Media configs
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_codecs.xml:system/etc/media_codecs.xml \
