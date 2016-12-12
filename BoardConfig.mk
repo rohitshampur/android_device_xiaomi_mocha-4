@@ -18,6 +18,7 @@ TARGET_BOOTLOADER_BOARD_NAME := mocha
 BOARD_KERNEL_CMDLINE := "androidboot.selinux=permissive"
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --dt device/xiaomi/mocha/dt.img --tags_offset 0x00000100
 
 # fix this up by examining /proc/mtd on a running device
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x00380000
