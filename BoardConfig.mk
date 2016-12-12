@@ -65,4 +65,4 @@ WIFI_DRIVER_FW_PATH_P2P          := "/etc/firmware/fw_bcmdhd_p2p.bin"
 WIFI_DRIVER_FW_PATH_PARAM        := "/sys/module/bcmdhd/parameters/firmware_path"
 
 # SELinux
-BOARD_SEPOLICY_DIRS += device/xiami/mocha/sepolicy
+BOARD_SEPOLICY_DIRS += device/xiaomi/mocha/sepolicy
