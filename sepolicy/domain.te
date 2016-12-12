@@ -12,4 +12,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-r_dir_file(domain, sysfs_bus_usb)
+# r_dir_file(domain, sysfs_bus_usb)

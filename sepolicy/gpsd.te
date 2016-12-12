@@ -20,12 +20,12 @@ allow gpsd sysfs_gpio:{ file lnk_file } rw_file_perms;
 allow gpsd sysfs_wake_lock:file rw_file_perms;
 
 # Allow gpsd access to create and write to /data/gps/
-allow gpsd self:capability { dac_override chown fsetid };
+# allow gpsd self:capability { dac_override chown fsetid };
 allow gpsd gps_data_file:dir create_dir_perms;
 
 # Allow gpsd write to properties
-allow gpsd gpsd_prop:property_service set;
-allow gpsd ctl_default_prop:property_service set;
+# allow gpsd gpsd_prop:property_service set;
+# allow gpsd ctl_default_prop:property_service set;
 
 # Allow gpsd read and write system_server
 allow gpsd system_server:unix_stream_socket { read write };
