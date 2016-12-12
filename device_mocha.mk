@@ -90,6 +90,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/camera/nvcamera.conf:system/etc/nvcamera.conf \
     $(LOCAL_PATH)/camera/model_frontal.xml:system/etc/model_frontal.xml
 
+# Overlay
+DEVICE_PACKAGE_OVERLAYS += \
+    device/xiaomi/mocha-common/overlay
+
 # Bluetooth
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth/bdaddr:system/etc/bluetooth/bdaddr \
