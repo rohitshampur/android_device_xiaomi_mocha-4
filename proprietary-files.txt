@@ -499,7 +499,6 @@ vendor/firmware/maxim_fp35.bin
 vendor/firmware/touch_fusion.cfg
 xbin/shelld
 xbin/mnld
-xbin/sb
 xbin/wl
 lib/modules/mac80211.ko
 lib/modules/baseband_usb_chr.ko
