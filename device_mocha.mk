@@ -68,7 +68,6 @@ PRODUCT_PACKAGES += \
     ueventd.mocha.rc
 
 PRODUCT_COPY_FILES += \
-    device/xiaomi/mocha/initfiles/etc/init:root/init \
     device/xiaomi/mocha/initfiles/etc/init.rc:root/init.rc \
     device/xiaomi/mocha/initfiles/sbin/healthd:root/sbin/healthd \
     device/xiaomi/mocha/initfiles/sbin/chargeonlymode:root/sbin/chargeonlymode \
@@ -94,7 +93,7 @@ PRODUCT_COPY_FILES += \
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
-    device/xiaomi/mocha-common/overlay
+    device/xiaomi/mocha/overlay
 
 # Bluetooth
 PRODUCT_COPY_FILES += \

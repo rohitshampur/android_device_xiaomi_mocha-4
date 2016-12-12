@@ -50,6 +50,9 @@ TW_EXTERNAL_STORAGE_MOUNT_POINT := "sdcard"
 # Tegra PowerHAL
 TARGET_POWERHAL_VARIANT := tegra
 
+# Init
+TARGET_INIT_VENDOR_LIB := libinit_mocha
+
 # Audio
 BOARD_USES_GENERIC_AUDIO := false
 BOARD_USES_ALSA_AUDIO := true
