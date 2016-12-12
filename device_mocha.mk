@@ -85,3 +85,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_codecs.xml:system/etc/media_codecs.xml \
     $(LOCAL_PATH)/media/media_profiles.xml:system/etc/media_profiles.xml
+
+# WiFi configs
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/wifi/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
+    $(LOCAL_PATH)/wifi/wpa_supplicant:system/bin/wpa_supplicant \
+    $(LOCAL_PATH)/wifi/wpa_supplicant.bin:system/bin/wpa_supplicant.bin \
+    $(LOCAL_PATH)/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
