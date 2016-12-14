@@ -13,11 +13,6 @@ on fs
     setprop ro.crypto.fuse_sdcard true
     mount_all /fstab.mocha
 
-    wait /dev/block/platform/sdhci-tegra.3/by-name/cache
-    exec /system/bin/sh /system/bin/mount_ext4.sh /dev/block/platform/sdhci-tegra.3/by-name/cache /cache
-
-    wait /dev/block/platform/sdhci-tegra.3/by-name/persist
-    exec /system/bin/sh /system/bin/mount_ext4.sh /dev/block/platform/sdhci-tegra.3/by-name/persist /persist
     chown system system /persist
     chmod 0771 /persist
     mkdir /persist/property 0700 root root
@@ -77,13 +72,13 @@ service nv_power /system/bin/power_mode.sh
     oneshot
     disabled
 
-on property:persist.sys.aries.power_profile=high
+on property:persist.sys.power_profile=2
     start nv_power
 
-on property:persist.sys.aries.power_profile=middle
+on property:persist.sys.power_profile=1
     start nv_power
 
-on property:persist.sys.aries.power_profile=low
+on property:persist.sys.power_profile=0
     start nv_power
 
 on property:persist.sys.matsir.enable=1
