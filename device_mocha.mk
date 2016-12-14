@@ -75,7 +75,6 @@ PRODUCT_PACKAGES += \
     fstab.mocha \
     init.mocha.rc \
     init.t124_emmc.rc \
-    init.t124_sata.rc \
     init.cal.rc \
     init.hdcp.rc \
     init.t124.rc \
@@ -86,10 +85,7 @@ PRODUCT_PACKAGES += \
     ueventd.mocha.rc
 
 PRODUCT_COPY_FILES += \
-    device/xiaomi/mocha/initfiles/etc/init.rc:root/init.rc \
-    device/xiaomi/mocha/initfiles/sbin/healthd:root/sbin/healthd \
-    device/xiaomi/mocha/initfiles/sbin/chargeonlymode:root/sbin/chargeonlymode \
-    device/xiaomi/mocha/initfiles/sbin/mdbd:root/sbin/mdbd \
+    device/xiaomi/mocha/initfiles/sbin/e2fsck_static:recovery/root/sbin/e2fsck_static
 
 # Device Keylayout
 PRODUCT_COPY_FILES += \
