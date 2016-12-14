@@ -80,6 +80,9 @@ WIFI_DRIVER_FW_PATH_AP           := "/etc/firmware/fw_bcmdhd_apsta.bin"
 WIFI_DRIVER_FW_PATH_P2P          := "/etc/firmware/fw_bcmdhd_p2p.bin"
 WIFI_DRIVER_FW_PATH_PARAM        := "/sys/module/bcmdhd/parameters/firmware_path"
 
+# Graphics
+USE_OPENGL_RENDERER := true
+
 # SELinux
 BOARD_SEPOLICY_DIRS += device/xiaomi/mocha/sepolicy
 BOARD_SEPOLICY_UNION += \
