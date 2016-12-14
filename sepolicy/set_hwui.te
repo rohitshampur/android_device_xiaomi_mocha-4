@@ -12,12 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-blakemgr		u:object_r:system_app_service:s0
-input-cfboost		u:object_r:system_app_service:s0
-nvcpl			u:object_r:system_app_service:s0
-PHS					u:object_r:ussrd_service:s0
-set_hwui_params		u:object_r:system_app_service:s0
+type set_hwui, domain;
+type set_hwui_exec, exec_type, file_type;
 
-android.display.hwcomposer        u:object_r:surfaceflinger_service:s0
+init_daemon_domain(set_hwui)
+unix_socket_connect(set_hwui, property, init)
 
-raydium.ts_service	u:object_r:raydium_touch_service:s0
+allow set_hwui default_prop:property_service set;
+allow set_hwui shell_exec:file read;
+allow set_hwui system_file:file execute_no_trans;

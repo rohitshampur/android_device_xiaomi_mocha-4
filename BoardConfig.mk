@@ -82,3 +82,44 @@ WIFI_DRIVER_FW_PATH_PARAM        := "/sys/module/bcmdhd/parameters/firmware_path
 
 # SELinux
 BOARD_SEPOLICY_DIRS += device/xiaomi/mocha/sepolicy
+BOARD_SEPOLICY_UNION += \
+	te_macros \
+	app.te \
+	bluetooth.te \
+	bootanim.te \
+	cvc.te \
+	device.te \
+	domain.te \
+	drmserver.te \
+	file_contexts \
+	file.te \
+	genfs_contexts \
+	gpload.te \
+	gpsd.te \
+	hostapd.te \
+	installd.te \
+	mediaserver.te \
+	netd.te \
+	platform_app.te \
+	property_contexts \
+	property.te \
+	raydium.te \
+	recovery.te \
+	service.te \
+	service_contexts \
+	set_hwui.te \
+	shell.te \
+	surfaceflinger.te \
+	system_app.te \
+	system_server.te \
+	tee.te \
+	ueventd.te \
+	untrusted_app.te \
+	usb.te \
+	ussrd.te \
+	ussr_setup.te \
+	vold.te \
+	wifi_loader.te \
+	wpa.te \
+	zygote.te \
+	healthd.te

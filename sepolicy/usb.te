@@ -12,12 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-blakemgr		u:object_r:system_app_service:s0
-input-cfboost		u:object_r:system_app_service:s0
-nvcpl			u:object_r:system_app_service:s0
-PHS					u:object_r:ussrd_service:s0
-set_hwui_params		u:object_r:system_app_service:s0
+# rebindEthernet - rebindEthernet which modifies /sys/bus/usb/drivers/smsc95xx/*
+type rebindEthernet, domain;
+type rebindEthernet_exec, exec_type, file_type;
 
-android.display.hwcomposer        u:object_r:surfaceflinger_service:s0
+init_daemon_domain(rebindEthernet)
 
-raydium.ts_service	u:object_r:raydium_touch_service:s0
+allow rebindEthernet rebindEthernet_exec:file open;
+allow rebindEthernet shell_exec:file read;
+allow rebindEthernet sysfs_bus_usb:file write;

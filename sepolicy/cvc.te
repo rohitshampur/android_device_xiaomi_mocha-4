@@ -1,4 +1,4 @@
-# Copyright (c) 2014, NVIDIA CORPORATION.  All rights reserved.
+# Copyright (c) 2014 NVIDIA CORPORATION.  All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,12 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-blakemgr		u:object_r:system_app_service:s0
-input-cfboost		u:object_r:system_app_service:s0
-nvcpl			u:object_r:system_app_service:s0
-PHS					u:object_r:ussrd_service:s0
-set_hwui_params		u:object_r:system_app_service:s0
+type cvc, domain;
+type cvc_exec, exec_type, file_type;
+init_daemon_domain(cvc)
+unix_socket_connect(cvc, property, init)
 
-android.display.hwcomposer        u:object_r:surfaceflinger_service:s0
-
-raydium.ts_service	u:object_r:raydium_touch_service:s0
+allow cvc self:netlink_socket create_socket_perms;
+allow cvc cvc_data_file:dir rw_dir_perms;
+allow cvc cvc_data_file:file create_file_perms;
+allow cvc sysfs_cvc:dir r_dir_perms;
+allow cvc sysfs_cvc:file rw_file_perms;
