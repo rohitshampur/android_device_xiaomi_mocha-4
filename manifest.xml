@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+<!-- MI PAD -->
+  <project name="harrynowl/android_kernel_xiaomi_mocha" path="kernel/xiaomi/mocha" remote="github" revision="cm-11.0" />
+  <project name="harrynowl/android_vendor_xiaomi_mocha" path="vendor/xiaomi/mocha" remote="github" revision="cm-11.0" />
+<project name="harrynowl/android_device_xiaomi_mocha" path="device/xiaomi/mocha" remote="github" revision="cm-11.0" />
+</manifest>
