@@ -33,7 +33,7 @@ TARGET_SPECIFIC_HEADER_PATH := device/xiaomi/mocha/include
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/xiaomi/mocha
-TARGET_KERNEL_CONFIG := mocha_user_defconfig
+TARGET_KERNEL_CONFIG := cyanogenmod_mocha_defconfig
 BOARD_KERNEL_IMAGE_NAME := zImage
 
 BOARD_HAS_NO_SELECT_BUTTON := true
