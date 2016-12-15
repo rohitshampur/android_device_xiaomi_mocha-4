@@ -98,6 +98,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/nvaudio_conf.xml:system/etc/nvaudio_conf.xml \
     $(LOCAL_PATH)/audio/nvaudio_fx.xml:system/etc/nvaudio_fx.xml
 
+# Overlay
+DEVICE_PACKAGE_OVERLAYS += \
+    device/xiaomi/mocha-common/overlay
+
 # Media configs
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_codecs.xml:system/etc/media_codecs.xml \
