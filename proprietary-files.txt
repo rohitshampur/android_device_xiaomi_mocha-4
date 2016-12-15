@@ -508,4 +508,6 @@ lib/modules/gspca_main.ko
 lib/modules/raw_ip_net.ko
 usr/keylayout/tegra-rt5671_headphone_detect.kl
 usr/keylayout/atmel-maxtouch.kl
-
+usr/idc/raydium_ts.idc
+usr/idc/sensor00fn11.idc
+usr/idc/touch_fusion.idc
