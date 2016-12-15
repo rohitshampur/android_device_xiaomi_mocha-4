@@ -92,6 +92,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/nvaudio_conf.xml:system/etc/nvaudio_conf.xml \
     $(LOCAL_PATH)/audio/nvaudio_fx.xml:system/etc/nvaudio_fx.xml
 
+# SELinux
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.boot.selinux=disabled
+
+
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     device/xiaomi/mocha-common/overlay
