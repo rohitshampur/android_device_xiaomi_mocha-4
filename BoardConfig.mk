@@ -3,22 +3,26 @@ USE_CAMERA_STUB := true
 # inherit from the proprietary version
 -include vendor/xiaomi/mocha/BoardConfigVendor.mk
 
-TARGET_ARCH := arm
-TARGET_NO_BOOTLOADER := true
-TARGET_BOARD_PLATFORM := unknown
+# Platform
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
+TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := cortex-a15
 TARGET_CPU_SMP := true
-ARCH_ARM_HAVE_TLS_REGISTER := true
 
-TARGET_BOOTLOADER_BOARD_NAME := mocha
+# Board
+TARGET_BOARD_PLATFORM := tegra
+TARGET_NO_BOOTLOADER := true
+TARGET_NO_RADIOIMAGE := true
 
+# Kernel
 BOARD_KERNEL_CMDLINE := "androidboot.selinux=permissive"
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --dt device/xiaomi/mocha/dt.img --tags_offset 0x00000100
+TARGET_KERNEL_SOURCE := kernel/xiaomi/mocha
+TARGET_KERNEL_CONFIG := cyanogenmod_mocha_defconfig
 
 # Partition sizes
 BOARD_BOOTIMAGE_PARTITION_SIZE := 20971520
@@ -31,12 +35,9 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 # Device perms
 TARGET_SPECIFIC_HEADER_PATH := device/xiaomi/mocha/include
 
-# Kernel
-TARGET_KERNEL_SOURCE := kernel/xiaomi/mocha
-TARGET_KERNEL_CONFIG := cyanogenmod_mocha_defconfig
-BOARD_KERNEL_IMAGE_NAME := zImage
-
+# Recovery
 BOARD_HAS_NO_SELECT_BUTTON := true
+TARGET_RECOVERY_FSTAB := device/xiaomi/mocha/recovery.fstab
 
 # Tegra PowerHAL
 TARGET_POWERHAL_VARIANT := tegra
