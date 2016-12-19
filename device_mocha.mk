@@ -34,8 +34,6 @@ TARGET_SCREEN_WIDTH := 1536
 # Platform
 PRODUCT_CHARACTERISTICS := tablet
 TARGET_TEGRA_VERSION := t124
-TARGET_TEGRA_MODEM := icera
-TARGET_TEGRA_TOUCH := raydium
 
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
@@ -81,11 +79,11 @@ PRODUCT_PACKAGES += \
     init.tlk.rc \
     init.nv_dev_board.usb.rc \
     power.mocha.rc \
-    init.recovery.hardware.rc \
+    init.recovery.mocha.rc \
     ueventd.mocha.rc
 
-PRODUCT_COPY_FILES += \
-    device/xiaomi/mocha/initfiles/sbin/e2fsck_static:recovery/root/sbin/e2fsck_static
+#PRODUCT_COPY_FILES += \
+#    device/xiaomi/mocha/initfiles/sbin/e2fsck_static:recovery/root/sbin/e2fsck_static
 
 # Device Keylayout
 PRODUCT_COPY_FILES += \
